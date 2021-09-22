@@ -1,0 +1,106 @@
+Order Number,FirstName,LastName,Phone,Address1,Address2,City, PostCode, State, PO Notes,Sku,Weight,ShippingMethod, Our Cost, Cust Paid,Shipping Agent,,,,,,,,,,,,,
+1000048321,Jane ,Doe,555-555-5555,1837 Test St,,Champaign,61820,IL,6294472 DS,Samsung-NY63T8751SS,236,Shipping - Inside Delivery*,2271,3329,AM_Home,37,29.94,28.69,Cooking,Ranges,30,PO1000048321-001,1,,2112,59.99,0,0
+1000048321,Jane ,Doe,555-555-5555,1838 Test St,,Champaign,61820,IL,,PAR-ERANGEKIT,2,Shipping - Inside Delivery*,13.34,24.99,AM_Home,,,,Cooking,Range Accessories,,,1,,,59.99,0,0
+1000048321,Jane ,Doe,555-555-5555,1839 Test St,,Champaign,61820,IL,,PRT-BSSPSB1090,1.5,Shipping - Inside Delivery*,17.69,31.99,AM_Home,1.25,,,Cooking,Range Accessories,,,1,,,59.99,0,0
+1000048321,Jane ,Doe,555-555-5555,1840 Test St,,Champaign,61820,IL,,Install-Range-Gas,1,Shipping - Inside Delivery*,50,89.99,AM_Home,,,,Install,Install,,,1,,,59.99,0,0
+1000048321,Jane ,Doe,555-555-5555,1841 Test St,,Champaign,61820,IL,,HaulAwy-Std,1,Shipping - Inside Delivery*,25,29.99,AM_Home,,,,Install,Haul Away,,,1,,,59.99,0,0
+1000048321,Jane ,Doe,555-555-5555,1842 Test St,,Champaign,61820,IL,,WarrantyEP-3Y2999MA,1,Shipping - Inside Delivery*,51.45,99.99,AM_Home,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10073310,Jane ,Doe,555-555-5555,1843 Test St,home,LIBERTY,64068,MO,DS,Bosch-NET8068SUC,26,Shipping - Inside Delivery,856,1199,,4.25,31,21.25,Cooking,Cooktops,30,PO10073310-001,1,,753,59.99,0,0
+10073310,Jane ,Doe,555-555-5555,1844 Test St,home,LIBERTY,64068,MO,,Bosch-HCP50652UC,49,Shipping - Inside Delivery,1022,1399,,24.56,28.25,30,Cooking,Ventilation,30,,1,,899,59.99,0,0
+10073310,Jane ,Doe,555-555-5555,1845 Test St,home,LIBERTY,64068,MO,,WarrantyEP-3Y1499MA,1,Shipping - Inside Delivery,38.52,77.99,,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10073310,Jane ,Doe,555-555-5555,1846 Test St,home,LIBERTY,64068,MO,DS,Bosch-HMC80152UC,86,Shipping - Inside Delivery,1277,1749,,19.6,29.75,21.38,Cooking,Wall Ovens,30,PO10073310-001,1,,1124,59.99,0,0
+10073310,Jane ,Doe,555-555-5555,1847 Test St,home,LIBERTY,64068,MO,,WarrantyEP-3Y1999MA,1,Shipping - Inside Delivery,44.29,88.99,,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10073310,Jane ,Doe,555-555-5555,1848 Test St,home,LIBERTY,64068,MO,,WarrantyEP-3Y1499MA,1,Shipping - Inside Delivery,38.52,77.99,,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10075071,Jane ,Doe,555-555-5555,1849 Test St,,Cedar Rapids,52403,IA,DS,Bosch-NET8068UC,26,Shipping Options - Standard Delivery,839,1199,AM_Home,4.25,31,21.25,Cooking,Cooktops,30,PO10075071-001,1,,738,0,0,0
+10079490,Jane ,Doe,555-555-5555,1850 Test St,,Demotte,46310,IN,DS,Bosch-SHPM65Z55N,91,Shipping Options - Standard Delivery,730,999,AM_Home,33.88,23.56,23.75,Clean Up,Dishwashers,24,PO10079490-001,1,,642,0,0,0
+10086491,Jane ,Doe,555-555-5555,1851 Test St,,Bentonville,72712,AR,DS,Signature-Design-3990525,105,Shipping - Standard Delivery,258.63,475.55,,42.5,40.25,42,Furniture,Chairs,,PO10086491-001,1,,,0,0,0
+10086491,Jane ,Doe,555-555-5555,1852 Test St,,Bentonville,72712,AR,,Warranty-WAR-HFN60-500,1,Shipping - Standard Delivery,24.65,49.99,,,,,Warranties,5 Year,,,1,,,0,0,0
+10088044,John ,Doe,555-555-5555,1853 Test St,,Brenham,77833,TX,DS,Bosch-HEZ27751,3,Free Shipping - Free Shipping,90,119,,,,,Cooking,Range Accessories,,PO10088044-001,1,,79,0,0,0
+10103424-1,John ,Doe,555-555-5555,1854 Test St,,QUINN,57775,SD,DS,Frigidaire-FGHB2868TD,352,Shipping Options - Standard Delivery,1806,2189.99,,69.88,35.88,33.38,Refrigeration,Refrigerators,36,PO10103424-002,1,,1706.67,0,0,0
+10107117,John ,Doe,555-555-5555,1855 Test St,,Saint Paul,55112,MN,DS,Samsung-RF28R7551SR,370.4,Shipping Options - Standard Delivery,2324,3419,AM_Home,70,35.75,34,Refrigeration,Refrigerators,36,PO10107117-001,1,,2161,0,0,0
+10118425,John ,Doe,555-555-5555,1856 Test St,,Napa,94559,CA,,Whirlpool-GX900QPPS,145,Shipping Options - Standard Delivery,783,919,,33.88,15,24.38,Clean Up,Trash Compactors,15,,1,,658,0,0,0
+10118763,John ,Doe,555-555-5555,1857 Test St,,orinda,94563,CA,,KitchenAid-KUDR204KSB,125,Shipping Options - Standard Delivery,2134,2461.99,,34.15,23.8,26.03,Refrigeration,Refrigerators,24,,1,,1846,0,0,0
+30001002,Jane ,Doe,555-555-5555,1858 Test St,,Labadie,63055,MO,,Whirlpool-UMC5225GZ,47,Custom Shipping Rate - millstone pickup,244,324,,12.56,24,19.63,Cooking,Microwaves,24,,1,,244,0,1,0
+10118868,John ,Doe,555-555-5555,1859 Test St,Unit 715,Scottsdale,85255,AZ,,KitchenAid-KUBR314KBS,150,Shipping Options - Inside Delivery,1979,2282.99,,,24,,Refrigeration,Refrigerators,24,,1,,1712,119.99,0,0
+10118868,John ,Doe,555-555-5555,1860 Test St,Unit 715,Scottsdale,85255,AZ,,HaulAwy-Std,1,Shipping Options - Inside Delivery,25,29.99,,,,,Install,Haul Away,,,1,,,119.99,0,0
+10120441,John ,Doe,555-555-5555,1861 Test St,First Floor,St. Louis,63117,MO,DS,Avanti-GR2013CSS,105,Shipping - Standard Delivery,410,590,AM_Home,40.25,19.5,25,Cooking,Ranges,20,PO10120441-001,1,,410,0,0,0
+10120441,John ,Doe,555-555-5555,1862 Test St,First Floor,St. Louis,63117,MO,,PRT-BSSPSB1090,1.5,Shipping - Standard Delivery,17.69,31.99,AM_Home,1.25,,,Cooking,Range Accessories,,,1,,,0,0,0
+10120441,John ,Doe,555-555-5555,1863 Test St,First Floor,St. Louis,63117,MO,DS,Frigidaire-FFID2426TS,78,Shipping - Standard Delivery,361,470.1,AM_Home,34.25,24,25,Clean Up,Dishwashers,24,PO10120441-001,1,,348.37,0,0,0
+10120441,John ,Doe,555-555-5555,1864 Test St,First Floor,St. Louis,63117,MO,warehouse,Whirlpool-WRB543CMJZ,160.5,Shipping - Standard Delivery,1039,1119,AM_Home,71,24,28.38,Refrigeration,Refrigerators,24,POWP250-001,1,,873,0,0,0
+10120441,John ,Doe,555-555-5555,1865 Test St,First Floor,St. Louis,63117,MO,,PAR-AQU1472,1,Shipping - Standard Delivery,16.65,29.99,AM_Home,,,,Refrigeration,Refrigeration Accessories,,,1,,,0,0,0
+10106922-1,Jane ,Doe,555-555-5555,1866 Test St,,Salida,81201,CO,DS,Fisher-Paykel-RF203QDUVX1,280,Shipping - Standard Delivery,2589,3699,R&L,70.5,35.63,27.06,Refrigeration,Refrigerators,36,266442,1,,2512,0,1,0
+10106922-1,Jane ,Doe,555-555-5555,1867 Test St,,Salida,81201,CO,IN STOCK,KITCHENAID-KODE500ESS,312,Shipping - Standard Delivery,2632,3349,R&L,51.25,30,27.13,Cooking,Wall Ovens,30,,1,,2277,0,0,0
+10106922-1,Jane ,Doe,555-555-5555,1868 Test St,,Salida,81201,CO,,PAR-AQU1472,1,Shipping - Standard Delivery,16.65,29.99,R&L,,,,Refrigeration,Refrigeration Accessories,,,1,,,0,1,0
+10106922-1,Jane ,Doe,555-555-5555,1869 Test St,,Salida,81201,CO,13-Sep,GE-PEM31SFSS,33,Shipping - Standard Delivery,315,399,R&L,12.13,24,12.88,Cooking,Microwaves,24,266346,1,,315,0,0,0
+10121042,John ,Doe,555-555-5555,1870 Test St,,Coral Springs,33065,FL,DS,Equator-EZ4400N-Gold,161,Shipping - Standard Delivery,902,1022.99,R&L,33.5,23.5,22,Laundry,Washer Dryer Combos,24,268637,1,,767,0,1,0
+10121042,John ,Doe,555-555-5555,1871 Test St,,Coral Springs,33065,FL,,PAR-CLF72WM2PK,1,Shipping - Standard Delivery,9.52,33.52,R&L,,,,Laundry,Laundry Accessories,,,1,,,0,1,0
+10121279,Jane ,Doe,555-555-5555,1872 Test St,,Corona,92880,CA,,WarrantyEP-5Y1999MA,1,Free Shipping - Free Shipping,82.46,164.99,,,,,Warranties,5 Year,,,1,,,0,0,0
+10121492,John ,Doe,555-555-5555,1873 Test St,,White Plains,10605,NY,,Warranty-MCC,1,Free Shipping - Free Shipping,5.2,99,,,,,Warranties,10 Year,,,1,,,0,0,0
+10121494,John ,Doe,555-555-5555,1874 Test St,,Wichita,67203-3686,KS,warehouse,Whirlpool-1901A,8,Shipping Options - Standard Delivery,280,358.97,,,,,Refrigeration,Refrigeration Accessories,,POWP258-001,2,,280,0,0,0
+10121772,Jane ,Doe,555-555-5555,1875 Test St,,PHILADELPHIA,19013,PA,,Warranty-WAR-HFN60-1500,1,Free Shipping - Free Shipping,59.71,119.99,,,,,Warranties,5 Year,,,1,,,0,0,0
+10122217,John ,Doe,555-555-5555,1876 Test St,,Fort Lauderdale,33306,FL,,Warranty-MCC,1,Free Shipping - Free Shipping,5.2,99,,,,,Warranties,10 Year,,,1,,,0,0,0
+10122249,John ,Doe,555-555-5555,1877 Test St,,Bristol,5443,VT,DS,Zephyr-ZRVE30BGG,59,Shipping Options - Standard Delivery,580,849,,42.5,29.94,19.75,Cooking,Ventilation,30,PO10122249-001,1,,580,29.99,0,0
+10122610,John ,Doe,555-555-5555,1878 Test St,,PLANTATION,33324,FL,,WarrantyEP-5Y4999RF,1,Free Shipping - Free Shipping,138.37,276.99,,,,,Warranties,5 Year,,,1,,,0,0,0
+10122942,Jane ,Doe,555-555-5555,1879 Test St,,Los Alamitos,90720,CA,INSTOCK,Bosch-SHP88PZ55N,91,Shipping - Inside Delivery*,1171,1649,,33.88,23.56,23.75,Clean Up,Dishwashers,24,,1,,1030,0,0,0
+10122942,Jane ,Doe,555-555-5555,1880 Test St,,Los Alamitos,90720,CA,,Install-Dishwasher,1,Shipping - Inside Delivery*,135,199.99,,,,,Install,Install,,,1,,,0,0,0
+10122942,Jane ,Doe,555-555-5555,1881 Test St,,Los Alamitos,90720,CA,,PAR-DWKIT1,1.65,Shipping - Inside Delivery*,11.99,29.99,,0.5,,,Clean Up,Dishwasher Accessories,,,1,,,0,0,0
+10122942,Jane ,Doe,555-555-5555,1882 Test St,,Los Alamitos,90720,CA,,HaulAwy-Std,1,Shipping - Inside Delivery*,25,29.99,,,,,Install,Haul Away,,,1,,,0,0,0
+10122942,Jane ,Doe,555-555-5555,1883 Test St,,Los Alamitos,90720,CA,,WarrantyEP-5Y1999MA,1,Shipping - Inside Delivery*,82.46,164.99,,,,,Warranties,5 Year,,,1,,,0,0,0
+10122942,Jane ,Doe,555-555-5555,1884 Test St,,Los Alamitos,90720,CA,DS,Bosch-SMZPCJB1UC,1,Shipping - Inside Delivery*,15,37.2,,,,,Clean Up,Dishwasher Accessories,,PO10122942-003,1,,13,0,1,0
+10123155-1,John ,Doe,555-555-5555,1885 Test St,,Mobile,36695,AL,,Kitchenaid-KUIX535HPS,107,Shipping Options - Standard Delivery,1995,2539,,34.5,15,25,Refrigeration,Ice Makers,15,,1,,1726,0,0,0
+10123357,John ,Doe,555-555-5555,1886 Test St,,Bainbridge Island,98110,WA,DS,Summit-FFBF279SS,177,Shipping - Standard Delivery,1125,1406.25,,67.63,27.63,26.75,Refrigeration,Refrigerators,28,268946,1,,1125,0,1,0
+10123357,John ,Doe,555-555-5555,1887 Test St,,Bainbridge Island,98110,WA,INSTOCK,Blomberg-BRFB1045SS,140,Shipping - Standard Delivery,944,1349,,67.56,23.44,24.44,Refrigeration,Refrigerators,24,,1,,944,0,0,0
+10123357,John ,Doe,555-555-5555,1888 Test St,,Bainbridge Island,98110,WA,,Warranty-MCC,1,Shipping - Standard Delivery,5.2,99,,,,,Warranties,10 Year,,,2,,,0,1,0
+10118169-1,Jane ,Doe,555-555-5555,1889 Test St,,Bluffton,29910,SC,,WarrantyEP-5Y1999MA,1,Shipping - Standard Delivery,82.46,164.99,,,,,Warranties,5 Year,,,1,,,0,1,0
+10118169-1,Jane ,Doe,555-555-5555,1890 Test St,,Bluffton,29910,SC,,KitchenAid-KCED600GSS,62,Shipping - Standard Delivery,1403,1729,,3.63,30.88,22.1,Cooking,Cooktops,30,,1,,1214,0,0,0
+10113939-1,John ,Doe,555-555-5555,1891 Test St,SUITE 108,Miami,33172,FL,,WarrantyEP-3Y1999MA,1,Shipping - Standard Delivery,44.29,88.99,,,,,Warranties,3 Year,,,1,,,0,0,0
+10113939-1,John ,Doe,555-555-5555,1892 Test St,SUITE 108,Miami,33172,FL,DS,GE-JXCK89,4,Shipping - Standard Delivery,57,93.01,,,,,Cooking,Range Accessories,,267371,1,,57,0,1,0
+10114150-3,Jane ,Doe,555-555-5555,1893 Test St,,Chesterfield,63005,MO,,KitchenAid-KOWT104ESS,56,Shipping Options - Standard Delivery,1115,1369,R&L,10.25,23.75,26,Cooking,Warming Drawers,24,,1,,964,0,0,0
+10116630-2,Jane ,Doe,555-555-5555,1894 Test St,,Peoria,61604,IL,DS,Zephyr-AK6536BBS,50,Custom Shipping Rate - Inside Delivery,349,425.06,Progistics,6.38,35.75,22.25,Cooking,Ventilation,36,PO10116630-1-001,1,,331.55,59.99,0,0
+10116630-2,Jane ,Doe,555-555-5555,1895 Test St,,Peoria,61604,IL,,WarrantyEP-3Y599MA,1,Custom Shipping Rate - Inside Delivery,25.42,49.99,Progistics,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10124266,John ,Doe,555-555-5555,1896 Test St,,Tustin,92782,CA,warehouse,KitchenAid-KBSD612ESS,657,Shipping Options - Inside Delivery*,7844,9204,,83.38,42.25,27.75,Refrigeration,Refrigerators,42,POWP278-001,1,,6903,0,0,0
+10124266,John ,Doe,555-555-5555,1897 Test St,,Tustin,92782,CA,,PS-BUILTINFRIDGEINSTALL,1,Shipping Options - Inside Delivery*,200,449,,,,,Install,Install,,,1,,,0,0,0
+10124266,John ,Doe,555-555-5555,1898 Test St,,Tustin,92782,CA,,DO-RM1BIR,1,Shipping Options - Inside Delivery*,139,199,,,,,Delivery,Haul Away,,,1,,,0,0,0
+10115124-1,Jane ,Doe,555-555-5555,1899 Test St,,Kissimmee,34744,FL,DS,Samsung-NV51K7770DS,307,Shipping - Standard Delivery,2335,3689,,51.38,28.75,24.44,Cooking,Wall Ovens,30,PO10115124-001,1,,2172,0,0,0
+10115124-1,Jane ,Doe,555-555-5555,1900 Test St,,Kissimmee,34744,FL,,WarrantyEP-3Y2999MA,1,Shipping - Standard Delivery,51.45,99.99,,,,,Warranties,3 Year,,,1,,,0,0,0
+10115124-1,Jane ,Doe,555-555-5555,1901 Test St,,Kissimmee,34744,FL,DS,ZLINE-RC36,52,Shipping - Standard Delivery,719.96,899.95,,3.44,36,21,Cooking,Cooktops,36,267676,1,,,0,1,0
+10115124-1,Jane ,Doe,555-555-5555,1902 Test St,,Kissimmee,34744,FL,IN STOCK,GE-UVC9360SLSS,45,Shipping - Standard Delivery,671,776,,12,34.38,19.25,Cooking,Ventilation,36,,1,,591,0,1,0
+10115124-1,Jane ,Doe,555-555-5555,1903 Test St,,Kissimmee,34744,FL,,KITCHENAID-KMBD104GSS,88,Shipping - Standard Delivery,1259,1549,,16,23.88,23.25,Cooking,Microwaves,24,,1,,1089,0,0,0
+10124285,John ,Doe,555-555-5555,1904 Test St,,Houston,77018,TX,INSTOCK,Bosch-SHP88PZ55N,91,Shipping - Standard Delivery,1171,1649,,33.88,23.56,23.75,Clean Up,Dishwashers,24,,1,,1030,0,0,0
+10124285,John ,Doe,555-555-5555,1905 Test St,,Houston,77018,TX,DS,Bosch-SMZPCJB1UC,1,Shipping - Standard Delivery,15,37.2,,,,,Clean Up,Dishwasher Accessories,,PO10124285-002,1,,13,0,1,0
+10124285,John ,Doe,555-555-5555,1906 Test St,,Houston,77018,TX,,PAR-DWKIT1,1.65,Shipping - Standard Delivery,11.99,29.99,,0.5,,,Clean Up,Dishwasher Accessories,,,1,,,0,0,0
+10124285,John ,Doe,555-555-5555,1907 Test St,,Houston,77018,TX,,WarrantyEP-3Y1999MA,1,Shipping - Standard Delivery,44.29,88.99,,,,,Warranties,3 Year,,,1,,,0,0,0
+10124338,John ,Doe,555-555-5555,1908 Test St,,West Palm Beach,33407,FL,,Warranty-MCC,1,Free Shipping - Free Shipping,5.2,99,,,,,Warranties,10 Year,,,1,,,0,0,0
+10124343,Jane ,Doe,555-555-5555,1909 Test St,,Reston,20194,VA,,Warranty-MCC,1,Free Shipping - Free Shipping,5.2,99,,,,,Warranties,10 Year,,,1,,,0,0,0
+10111824-2,Jane ,Doe,555-555-5555,1910 Test St,,Corinth,76208,TX,IN STOCK,KITCHENAID-KODE500ESS,312,Shipping - Inside Delivery,2632,3349,AM_Home,51.25,30,27.13,Cooking,Wall Ovens,30,,1,,2277,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1911 Test St,,Corinth,76208,TX,IN STOCK,KITCHENAID-KRFC300ESS,350,Shipping - Inside Delivery,1773,2224,AM_Home,70.13,35.75,29.38,Refrigeration,Refrigerators,36,POWP201-001,1,,1534,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1912 Test St,,Corinth,76208,TX,,PAR-AQU1472,1,Shipping - Inside Delivery,16.65,29.99,AM_Home,,,,Refrigeration,Refrigeration Accessories,,,1,,,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1913 Test St,,Corinth,76208,TX,,WarrantyEP-3Y2999RF,1,Shipping - Inside Delivery,87.67,175.99,AM_Home,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1914 Test St,,Corinth,76208,TX,IN STOCK,KITCHENAID-KMBD104GSS,88,Shipping - Inside Delivery,1259,1549,AM_Home,16,23.88,23.25,Cooking,Microwaves,24,,1,,1089,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1915 Test St,,Corinth,76208,TX,,WarrantyEP-3Y1499MA,1,Shipping - Inside Delivery,38.52,77.99,AM_Home,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1916 Test St,,Corinth,76208,TX,IN STOCK,KitchenAid-KDTM404KPS,116,Shipping - Inside Delivery,823,1054,AM_Home,33.5,23.88,26.75,Clean Up,Dishwashers,24,,1,,712,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1917 Test St,,Corinth,76208,TX,,PAR-DWKIT1,1.65,Shipping - Inside Delivery,11.99,29.99,AM_Home,0.5,,,Clean Up,Dishwasher Accessories,,,1,,,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1918 Test St,,Corinth,76208,TX,,WarrantyEP-3Y999MA,1,Shipping - Inside Delivery,31.58,63.99,AM_Home,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1919 Test St,,Corinth,76208,TX,DS,Alfi-AB3318HS-B,76,Shipping - Inside Delivery,614.5,768.13,AM_Home,10,18.13,33.13,Plumbing,Sinks,,267132,1,,,59.99,1,0
+10111824-2,Jane ,Doe,555-555-5555,1920 Test St,,Corinth,76208,TX,IN STOCK,KITCHENAID-KCGS550ESS,59.6,Shipping - Inside Delivery,1115,1369,AM_Home,3.63,30,21,Cooking,Cooktops,30,POWP227-001,1,,964,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1921 Test St,,Corinth,76208,TX,,PRT-BSSPSB1090,1.5,Shipping - Inside Delivery,17.69,31.99,AM_Home,1.25,,,Cooking,Range Accessories,,,1,,,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1922 Test St,,Corinth,76208,TX,,WarrantyEP-3Y1499MA,1,Shipping - Inside Delivery,38.52,77.99,AM_Home,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1923 Test St,,Corinth,76208,TX,,WarrantyEP-3Y4999MA,1,Shipping - Inside Delivery,61.03,119.99,AM_Home,,,,Warranties,3 Year,,,1,,,59.99,0,0
+10111824-2,Jane ,Doe,555-555-5555,1924 Test St,,Corinth,76208,TX,,PAR-DWKIT1,1.65,Shipping - Inside Delivery,11.99,29.99,AM_Home,0.5,,,Clean Up,Dishwasher Accessories,,,1,,,59.99,0,0
+10115903-2,John ,Doe,555-555-5555,1925 Test St,,Hallandale,33009,FL,2-Aug,GE-Cafe-CVE28DM5NS5,405,Shipping - Inside Delivery,2980,3863,,69.88,35.63,36.75,Refrigeration,Refrigerators,36,267549,1,,2503,59.99,0,0
+10115903-2,John ,Doe,555-555-5555,1926 Test St,,Hallandale,33009,FL,13-Sep,GE-Cafe-CDT845M5NS5,105,Shipping - Inside Delivery,970,1253,,34,23.75,24,Clean Up,Dishwashers,24,267549,1,,825,59.99,0,0
+10115903-2,John ,Doe,555-555-5555,1927 Test St,,Hallandale,33009,FL,,PAR-AQU1472,1,Shipping - Inside Delivery,16.65,29.99,,,,,Refrigeration,Refrigeration Accessories,,,1,,,59.99,0,0
+10115903-2,John ,Doe,555-555-5555,1928 Test St,,Hallandale,33009,FL,,PAR-DWKIT1,1.65,Shipping - Inside Delivery,11.99,29.99,,0.5,,,Clean Up,Dishwasher Accessories,,,1,,,59.99,0,0
+10115903-2,John ,Doe,555-555-5555,1929 Test St,,Hallandale,33009,FL,,PRT-BSSPSB1090,1.5,Shipping - Inside Delivery,17.69,31.99,,1.25,,,Cooking,Range Accessories,,,1,,,59.99,0,0
+10115903-2,John ,Doe,555-555-5555,1930 Test St,,Hallandale,33009,FL,23-Sep,GE-Cafe-CGU366P2TS1,135,Shipping - Inside Delivery,2440,2992,,8.5,35.88,27.5,Cooking,Cooktops,36,267549,1,,2050,59.99,0,0
+10124350,John ,Doe,555-555-5555,1931 Test St,,Chico,95973,CA,,Whirlpool-CSP2941HQ,295,Shipping - Standard Delivery,1475,1909,,76.75,27,29,Laundry,Dryers,27,,1,,1239,0,0,0
+10124350,John ,Doe,555-555-5555,1932 Test St,,Chico,95973,CA,,PRT-GDRYERKIT,5,Shipping - Standard Delivery,13.2,37.2,,,,,Laundry,Laundry Accessories,,,1,,,0,0,0
+10124350,John ,Doe,555-555-5555,1933 Test St,,Chico,95973,CA,,CPS-LGAP52000,1,Shipping - Standard Delivery,59.38,179,,,,,Warranties,5 Year,,,1,,,0,0,0
+10124350,John ,Doe,555-555-5555,1934 Test St,,Chico,95973,CA,,Warranty-MCC,1,Shipping - Standard Delivery,5.2,99,,,,,Warranties,10 Year,,,1,,,0,0,0
+10124351,John ,Doe,555-555-5555,1935 Test St,,Fort Pierce,34949,FL,,Warranty-MCC,1,Free Shipping - Free Shipping,5.2,99,,,,,Warranties,10 Year,,,1,,,0,0,0
+10124352,Jane ,Doe,555-555-5555,1936 Test St,,Healdsburg,95448,CA,,KITCHENAID-KSDG950ESS,205,Custom Shipping Rate - INSIDE DELIVERY,2564,3394,,36,29.88,28.88,Cooking,Ranges,30,,1,,2218,0,0,0
+10124352,Jane ,Doe,555-555-5555,1937 Test St,,Healdsburg,95448,CA,,KitchenAid-KDTM404KPS,116,Custom Shipping Rate - INSIDE DELIVERY,823,1054,,33.5,23.88,26.75,Clean Up,Dishwashers,24,,1,,712,0,0,0
+10124352,Jane ,Doe,555-555-5555,1938 Test St,,Healdsburg,95448,CA,,PAR-DWKIT1,1.65,Custom Shipping Rate - INSIDE DELIVERY,11.99,29.99,,0.5,,,Clean Up,Dishwasher Accessories,,,1,,,0,0,0
+10124352,Jane ,Doe,555-555-5555,1939 Test St,,Healdsburg,95448,CA,,PAR-ERANGEKIT,2,Custom Shipping Rate - INSIDE DELIVERY,13.34,24.99,,,,,Cooking,Range Accessories,,,1,,,0,0,0
+10124352,Jane ,Doe,555-555-5555,1940 Test St,,Healdsburg,95448,CA,,PRT-BSSPSB1090,1.5,Custom Shipping Rate - INSIDE DELIVERY,17.69,31.99,,1.25,,,Cooking,Range Accessories,,,1,,,0,0,0
+10124352,Jane ,Doe,555-555-5555,1941 Test St,,Healdsburg,95448,CA,,Warranty-MCC,1,Custom Shipping Rate - INSIDE DELIVERY,5.2,99,,,,,Warranties,10 Year,,,2,,,0,0,0

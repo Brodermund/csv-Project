@@ -12,6 +12,8 @@
   <script src="ProgisticsMap.js"></script>
   <script src="ProGrid.js"></script>
   <script src="RLMasterMap.js"></script>
+  <script src="partcheck.js"></script>
+  <script src="XPO.js"></script>
 
 </head>
 <style>
@@ -40,7 +42,7 @@
     <button class="tablinks" onclick="openCity(event, 'HaulInstall')" id="HITab">Haul/Install</button>
     <button class="tablinks" onclick="openCity(event, 'ShipStandard')"id="SSTab">Ship Standard</button>
     <button class="tablinks" onclick="openCity(event, 'ShipInside')"id="SITab">Ship Inside</button>
-    <button class="tablinks" onclick="openCity(event, 'ShipFree')">Profit</button>
+    <button class="tablinks" onclick="openCity(event, 'ShipFree')" id="XPOTab">XPO</button>
     <button class="tablinks" onclick="openCity(event, 'OtherTab')" id="EmptyTab">Empty/Done</button>
     <button class="tablinks" onclick="openCity(event, 'RL/Progistics')" id="UncatTab">Rl/Pro</button>
     <button class="tablinks" onclick="openCity(event, 'LocalTab')"id="LocTab">Local</button>
@@ -51,17 +53,16 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PO#</th>
-        <th>MaxShip</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -71,17 +72,16 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PO#</th>
-        <th>MaxShip</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -91,17 +91,16 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PO#</th>
-        <th>MaxShip</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -111,17 +110,16 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PO#</th>
-        <th>MaxShip</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -131,17 +129,16 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PO#</th>
-        <th>MaxShip</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -151,17 +148,16 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PO#</th>
-        <th>MaxShip</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -171,17 +167,16 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PRO$</th>
-        <th>AMH$</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -191,29 +186,35 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PO#</th>
-        <th>MaxShip</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
   <div id="ShipFree" class="tabcontent">
-    <table id="ProfitTable">
+    <table id="XPOTable">
       <tr id="header">
-        <th>Order Number</th>
+        <th>Order#</th>
+        <th>Customer</th>
+        <th>Address</th>
+        <th>Zip</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>AMZ</th>
         <th>SKU</th>
-        <th>Margin</th>
-        <th>Ship Cost</th>
-        <th>10% Goal</th>
-        <th>Profit</th>
+        <th>Weight</th>
+        <th>Cube</th>
+        <th>String</th>
+        <th>Link</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -223,17 +224,16 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PO#</th>
-        <th>MaxShip</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -243,36 +243,35 @@
         <th>Order#</th>
         <th>Customer</th>
         <th>Address</th>
-        <th>Phone</th>
         <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
         <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
         <th>Cube</th>
-        <th>PO#</th>
-        <th>MaxShip</th>
+        <th>String</th>
         <th>Link</th>
-        <th>Direct</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
   <div id="LocalTab" class="tabcontent">
     <table id="LocalTable">
       <tr id="header">
-        <th>Order Number</th>
+        <th>Order#</th>
         <th>Customer</th>
-        <th>Phone</th>
         <th>Address</th>
-        <th>Zip Code</th>
+        <th>Zip</th>
+        <th>Phone</th>
         <th>City</th>
-        <th>AM Zone</th>
-        <th>State</th>
+        <th>AMZ</th>
         <th>SKU</th>
         <th>Weight</th>
-        <th>Margin</th>
-        <th>ShipInfo</th>
-        <th>Shipping Agent</th>
+        <th>Cube</th>
+        <th>String</th>
+        <th>Link</th>
+        <th>Carrier</th>
       </tr>
     </table>
   </div>
@@ -287,6 +286,7 @@
     let ProCount = 1
     let HiCount = 1
     let EmptyCount = 1
+    let XPOCount = 1
 
 
     let globalObjArr = []
@@ -333,7 +333,6 @@
       }
       return otherArr
     }
-
     function TableAmounts(){
       let fxRows = document.getElementById("FXTable").rows.length - 1;
       let AmRows = document.getElementById("AMTable").rows.length - 1;
@@ -346,6 +345,7 @@
       let SIRows = document.getElementById("SITable").rows.length - 1;
       let EmptyRows = document.getElementById("EmptyTable").rows.length - 1;
       let OtherRows = document.getElementById("RL/ProTable").rows.length - 1;
+      let XPORows = document.getElementById("XPOTable").rows.length - 1;
       document.getElementById("AMTab").innerText = `AMHOME(${AmRows})` 
       document.getElementById("FXTab").innerText = `FEDEX(${fxRows})`
       document.getElementById("RLTab").innerText = `R&L(${RLRows})`
@@ -356,14 +356,19 @@
       document.getElementById("ProTab").innerText = `Progistics(${ProRows})`
       document.getElementById("SITab").innerText = `Ship Inside(${SIRows})`   
       document.getElementById("EmptyTab").innerText = `Empty/Done(${EmptyRows})` 
-      document.getElementById("UncatTab").innerText = `Uncategorized(${OtherRows})`         
+      document.getElementById("UncatTab").innerText = `Uncategorized(${OtherRows})`
+      document.getElementById("XPOTab").innerText = `XPO(${XPORows})`          
       
     }
     function checkLocal(arr){
       let otherArr = []
       let LocalCount = 0
       for (let i = 0; i < arr.length; i++) {
-        if (arr[i].Local === true) {
+        if (XPOMapper(arr[i].Zip) != "N/A") {
+          skuSplit(arr[i],"XPOTable",XPOCount)
+          XPOCount++
+        }
+        else if (arr[i].Local === true) {
           skuSplit(arr[i],"LocalTable",LocalCount)
           LocalCount++
         }
@@ -416,6 +421,13 @@
       }
       return otherArr
     }
+    function replaceZero(num){
+      let final
+      let compare = Number(num)
+      if (compare < 1){final = 1}
+      else{final = num}
+      return final
+    }
     function getRLRateQuoteString(obj){
       let itemArr = []
       let numItems = 0
@@ -427,7 +439,7 @@
         poNumber = obj.Product[0].PONum
       }
       for(let i = 0; i < obj.Product.length;i++){
-        if(String(obj.Product[i].Sku).includes("Warranty") || String(obj.Product[i].Sku).includes("HaulAwy") || String(obj.Product[i].Sku).includes("Install-") || String(obj.Product[i].PONotes).toUpperCase().includes("DS") || obj.Product[i].PONotes === undefined){
+        if(String(obj.Product[i].Sku).includes("Warranty") || String(obj.Product[i].Sku).includes("HaulAwy") || String(obj.Product[i].Sku).includes("Install-") || String(obj.Product[i].PONotes).toUpperCase().includes("DS") || obj.Product[i].PONotes === undefined|| obj.Product[i].Shipped === true){
             continue
           }
           else{
@@ -439,12 +451,25 @@
 
       }
       let finalItemString = itemArr.join(";")
-      let finalstring = `${obj.Customer};${obj.Address};${obj.Zip};${obj.phone};${obj.orderNo};${poNumber};${obj.City};${obj.State};${numItems};${finalItemString}`
+      let finalstring = `${obj.Customer};${obj.Address};${obj.FullZip};${obj.phone};${obj.orderNo};${poNumber};${obj.City};${obj.State};${numItems};${finalItemString}`
       return finalstring
 
     }
     function getFedexString(obj){
-      let finalString = `${obj.Customer};${obj.Address};${obj.Zip};${obj.City};${obj.State};${obj.phone};${obj.orderNo};${obj.ProductWeight}`
+      let numItems = 0
+      let itemArr = []
+      for(let i = 0; i < obj.Product.length;i++){
+        if(String(obj.Product[i].Sku).includes("Warranty") || String(obj.Product[i].Sku).includes("HaulAwy") || String(obj.Product[i].Sku).includes("Install-") || String(obj.Product[i].PONotes).toUpperCase().includes("DS") || obj.Product[i].PONotes === undefined|| obj.Product[i].Shipped === true){
+            continue
+          }
+          else{
+            itemArr.push(`${obj.Product[i].Quantity}:${obj.Product[i].Weight}:${Math.ceil(obj.Product[i].Depth)}:${Math.ceil(obj.Product[i].Width)}:${Math.ceil(obj.Product[i].Height)}`)
+            numItems = numItems + obj.Product[i].Quantity
+          }
+
+      }
+      let finalItemString = itemArr.join(";")
+      let finalString = `${obj.Customer};${obj.Address};${obj.FullZip};${obj.City};${obj.State};${obj.phone};${obj.orderNo};${numItems};${finalItemString}`
       return finalString
 
     }
@@ -514,9 +539,8 @@
       for (let i = 0; i< product.length; i++) {
         let productHead = ["AdW", "SKU", "Wt", "Category","Qty", "Class"]
         if( i === 0){
-          if (tableid === "SSTable" || tableid === "SITable") {insert_Row_Standard(tableid,obj,row)}
-            else{insert_Row_Test(tableid,obj,row)}
-          if(product[i].Sku.includes("Warranty") || product[i].Sku.includes("HaulAwy") || product[i].Sku.includes("Install-") || product[i].PONotes.toUpperCase().includes("DS")|| product[i].Sku.includes("FME-")){
+          insert_Row_Test(tableid,obj,row)
+          if(product[i].Sku.includes("Warranty") || product[i].Sku.includes("HaulAwy") || product[i].Sku.includes("Install-") || product[i].PONotes.toUpperCase().includes("DS")|| product[i].Sku.includes("FME-") || product[i].Shipped === true){
             continue
           }
           else{
@@ -524,7 +548,7 @@
           }
         }
         else{
-          if(product[i].Sku.includes("Warranty") || product[i].Sku.includes("HaulAwy") || product[i].Sku.includes("Install-") || product[i].PONotes.toUpperCase().includes("DS")){
+          if(product[i].Sku.includes("Warranty") || product[i].Sku.includes("HaulAwy") || product[i].Sku.includes("Install-") || product[i].PONotes.toUpperCase().includes("DS")|| product[i].Sku.includes("FME-") || product[i].Shipped === true){
             continue
           }
           else{
@@ -666,7 +690,7 @@
         `<div id = "copy">
             <label class="copylabel">
               <button onclick="copyToClipboard('${obj.MaxShipping}',${row},${col},'${tableid}')">${obj.MaxShipping}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.MaxShipping}</span>
+              <span id="${tableid}Row${row}Col" class="btn btn-primary">${obj.MaxShipping}</span>
             </label>
         </div>`;
         col++
@@ -739,178 +763,6 @@
         </div>`
         col++  
     }
-    function insert_Row_Standard(tableid,obj,row){
-      let col = 1
-      let RLString = getRLRateQuoteString(obj)
-      let fedexString = getFedexString(obj)
-      let shipperstring
-      let State
-    
-      let x=document.getElementById(tableid).insertRow(-1);
-      x.id = `${tableid}row${row}`
-      let a = x.insertCell(0);
-      let b = x.insertCell(1);
-      let c = x.insertCell(2);
-      let d = x.insertCell(3);
-      let e = x.insertCell(4);
-      let f = x.insertCell(5);
-      let g = x.insertCell(6);
-      let h = x.insertCell(7);
-      let i = x.insertCell(8);
-      let j = x.insertCell(9);
-      let k = x.insertCell(10);
-      let l = x.insertCell(11);
-      let m = x.insertCell(12);
-      let n = x.insertCell(13);
-      
-
-      a.innerHTML=
-        `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.orderNo}',${row},${col},'${tableid}')">${obj.orderNo}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.orderNo}</span>
-            </label>
-        </div>`;
-        col++
-      b.innerHTML=
-      `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.Customer}',${row},${col},'${tableid}')">${obj.Customer}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.Customer}</span>
-            </label>
-        </div>`;
-        col++
-      c.innerHTML=
-        `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.Address}',${row},${col},'${tableid}')">${obj.Address}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.Address}</span>
-            </label>
-        </div>`;
-        col++
-      d.innerHTML=
-        `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.Zip}',${row},${col},'${tableid}')">${obj.Zip}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.Zip}</span>
-            </label>
-        </div>`;
-        col++
-      e.innerHTML=
-      `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.phone}',${row},${col},'${tableid}')">${obj.phone}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.phone}</span>
-            </label>
-        </div>`;
-        col++
-      f.innerHTML=
-        `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.City}',${row},${col},'${tableid}')">${obj.City}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.City}</span>
-            </label>
-        </div>`;
-        col++
-      g.innerHTML=
-        `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${RLString}',${row},${col},'${tableid}')">RL</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">RL</span>
-            </label>
-        </div>`;
-        col++
-      h.innerHTML=`
-        <table id = "${tableid}ProductRow${row}Col${col}" class="skuTable"> 
-          <th class = "col1">AdW</th>
-          <th class = "col2">SKU</th>
-          <th class = "col3">Wt</th>
-          <th class = "col4">Category</th>
-          <th class = "col5">Qty</th>
-          <th class = "col6">Class</th>
-        </table>`;
-        col++
-      i.innerHTML=
-      `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.totalWeight}',${row},${col},'${tableid}')">${obj.totalWeight}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.totalWeight}</span>
-            </label>
-        </div>`;
-        col++
-      j.innerHTML=
-      `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.totalCube}',${row},${col},'${tableid}')">${obj.totalCube}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.totalCube}</span>
-            </label>
-        </div>`;
-        col++
-      k.innerHTML= `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.Carrier}',${row},${col},'${tableid}')">${obj.Carrier}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.Carrier}</span>
-            </label>
-        </div>`;
-        col++
-      l.innerHTML=
-        `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.AMQuote}',${row},${col},'${tableid}')">${obj.AMQuote}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.AMQuote}</span>
-            </label>
-        </div>`;
-        col++
-      m.innerHTML=
-        `<div id = "copy">
-            <label class="copylabel">
-              <a id="${tableid}Row${row}Col${col}" href="https://admin.goedekers.com/admin/sales/order/view/order_id/${obj.EntityID}/key/${obj.MagentoKey}">Magento</a>
-            </label>
-        </div>`
-        col++
-      n.innerHTML=
-        `<div class="dropdown">
-          <button onclick="myFunction('${tableid}',${row})" class="dropbtn">Send</button>
-          <div id="Dropdown${tableid}${row}" class="dropdown-content">
-            <div class = "Drop">
-              <label class="DropLabel">
-                <button onclick="sendToRL('${tableid}',${row},globalObjArr)">RL</button>
-                <span class="btn btn-primary">R&L</span>
-              </label>
-            </div>
-            <div class = "Drop">
-              <label class="DropLabel">
-                <button onclick="sendToPro('${tableid}',${row},globalObjArr)">Progistics</button>
-                <span class="btn btn-primary">Progistics</span>
-              </label>
-            </div>
-            <div class = "Drop">
-              <label class="DropLabel">
-                <button onclick="sendToAM('${tableid}',${row},globalObjArr)">AM Home</button>
-                <span class="btn btn-primary">AM Home</span>
-              </label>
-            </div>
-            <div class = "Drop">
-              <label class="DropLabel">
-                <button onclick="sendToFX('${tableid}',${row},globalObjArr)">FEDEX</button>
-                <span class="btn btn-primary">FEDEX</span>
-              </label>
-            </div>
-            <div class = "Drop">
-              <label class="DropLabel">
-                <button onclick="sendToProfit('${tableid}',${row},globalObjArr)">Profit</button>
-                <span class="btn btn-primary">Profit</span>
-              </label>
-            </div>
-            <div class = "Drop">
-              <label class="DropLabel">
-                <button onclick="sendToEmpty('${tableid}',${row},globalObjArr)">Empty</button>
-                <span class="btn btn-primary">Empty</span>
-              </label>
-            </div>
-          </div>
-        </div>`;
-    }
     function insert_Row_Test(tableid,obj,row){
       let col = 1
       let RLString = getRLRateQuoteString(obj)
@@ -928,7 +780,7 @@
         shipperstring = `<div id = "copy">
             <label class="copylabel">
               <button onclick="copyToClipboard('${fedexString}',${row},${col},'${tableid}')">Fedex</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">Fedex</span>
+              <span id="${tableid}Row${row}Col11" class="btn btn-primary">Fedex</span>
             </label>
         </div>`;
       }
@@ -968,7 +820,6 @@
       let k = x.insertCell(10);
       let l = x.insertCell(11);
       let m = x.insertCell(12);
-      let n = x.insertCell(13);
       
 
       a.innerHTML=
@@ -1055,41 +906,34 @@
         col++
       k.innerHTML= shipperstring
         col++
+
       l.innerHTML=
-        `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${obj.Carrier}',${row},${col},'${tableid}')">${obj.Carrier}</button>
-              <span id="${tableid}Row${row}Col${col}" class="btn btn-primary">${obj.Carrier}</span>
-            </label>
-        </div>`;
-        col++
-      m.innerHTML=
         `<div id = "copy">
             <label class="copylabel">
               <a id="${tableid}Row${row}Col${col}" href="https://admin.goedekers.com/admin/sales/order/view/order_id/${obj.EntityID}/key/${obj.MagentoKey}">Magento</a>
             </label>
         </div>`
         col++
-      n.innerHTML=
+      m.innerHTML=
         `<div class="dropdown">
-          <button onclick="myFunction('${tableid}',${row})" class="dropbtn">Send</button>
-          <div id="Dropdown${tableid}${row}" class="dropdown-content">
+          <button class="dropbtn">${obj.Carrier}</button>
+          <div id="Dropdown${tableid}${row}${col}" class="dropdown-content">
             <div class = "Drop">
               <label class="DropLabel">
                 <button onclick="sendToRL('${tableid}',${row},globalObjArr)">RL</button>
-                <span class="btn btn-primary">R&L</span>
+                <span class="btn btn-primary">R&L:${obj.RLQuote}</span>
               </label>
             </div>
             <div class = "Drop">
               <label class="DropLabel">
                 <button onclick="sendToPro('${tableid}',${row},globalObjArr)">Progistics</button>
-                <span class="btn btn-primary">Progistics</span>
+                <span class="btn btn-primary">Progistics:${obj.ProQuote}</span>
               </label>
             </div>
             <div class = "Drop">
               <label class="DropLabel">
                 <button onclick="sendToAM('${tableid}',${row},globalObjArr)">AM Home</button>
-                <span class="btn btn-primary">AM Home</span>
+                <span class="btn btn-primary">AM Home:${obj.AMQuote}</span>
               </label>
             </div>
             <div class = "Drop">
@@ -1128,7 +972,7 @@
       b.innerHTML=
         `<div id = "copy">
             <label class="copylabel">
-              <button onclick="copyToClipboardBase('${obj.rlSku}')">${obj.Sku}</button>
+              <button onclick="copyToClipboardBase('${obj.RLSku}')">${obj.Sku}</button>
               <span class="btn btn-primary">${obj.Sku}</span>
             </label>
         </div>`
@@ -1144,32 +988,6 @@
         </div>`
 
 
-    }
-    function insert_Row2(tableid,text1,text2){
-      let x=document.getElementById(tableid).insertRow(-1);
-      let a = x.insertCell(0);
-      let b = x.insertCell(1);
-      a.innerHTML=`${text1}`;
-      b.innerHTML=`${text2}`;
-    }
-    function insert_Row_Button(tableid,text1,text2,iterator){
-      let x=document.getElementById(tableid).insertRow(-1);
-      let a = x.insertCell(0);
-      let b = x.insertCell(1);
-      a.innerHTML= 
-        `<div id = "copy">
-            <label class="copylabel">
-              <button onclick="copyToClipboard('${text1}',${iterator},1)">${text1}</button>
-              <span id="copy1${iterator}" class="btn btn-primary">${text1}</span>
-            </label>
-        </div>`
-      b.innerHTML=
-        `<div id="copy">
-          <label class="copylabel">
-            <button onclick="copyToClipboard('${text2}',${iterator},2)">${text2}</button>
-            <span id="copy2${iterator}" class="btn btn-primary">${text2}</span>
-          </label>
-        </div>`
     }
     function openMagento(entityid){
       let magentoKey = ["b9cc24e34287219037475d8441e9fc64626e721592bc553bfb9006da85fdc253"]
@@ -1192,30 +1010,6 @@
       
       parentDiv.replaceChild(newspan,ogOutput)
     }
-    function insert_Row3(tableid,text1,text2){
-      let x=document.getElementById(tableid).insertRow(-1);
-      let a = x.insertCell(0);
-      let b = x.insertCell(1);
-      a.innerHTML=`${text1}`;
-      b.innerHTML=`${text2}`;
-    }
-    function myFunction(tableid,row) {
-      let id = `Dropdown${tableid}${row}`
-      console.log(id) 
-      document.getElementById(`Dropdown${tableid}${row}`).classList.toggle("show");
-    }      
-    window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
     function sendToRL(tableid,row,arr){
       let id =`${tableid}Row${row}Col1`
       console.log(id)
@@ -1289,19 +1083,19 @@
       TableAmounts()
     }
     function sendToFX(tableid,row,arr){
-  let newTable ="FXTable"
-  let order = document.getElementById(`${tableid}Row${row}Col1`)
-  let tableRow = document.getElementById(`${tableid}row${row}`)
-  let rowIndex = tableRow.rowIndex
-  let orderNum = order.innerText
-  let objIndex = arr.findIndex(Line => Line.orderNo === orderNum)
-  let obj = arr[objIndex]
-  let rowStart = FxCount 
-  skuSplit(obj,newTable,rowStart)
-  FxCount++
-  document.getElementById(tableid).deleteRow(rowIndex);
-  TableAmounts()
-}
+      let newTable ="FXTable"
+      let order = document.getElementById(`${tableid}Row${row}Col1`)
+      let tableRow = document.getElementById(`${tableid}row${row}`)
+      let rowIndex = tableRow.rowIndex
+      let orderNum = order.innerText
+      let objIndex = arr.findIndex(Line => Line.orderNo === orderNum)
+      let obj = arr[objIndex]
+      let rowStart = FxCount 
+      skuSplit(obj,newTable,rowStart)
+      FxCount++
+      document.getElementById(tableid).deleteRow(rowIndex);
+      TableAmounts()
+    }
     function copyToClipboard(text,iterator,column,tableid) {
       let input = document.createElement('input');
       input.setAttribute('value', text);
@@ -1443,13 +1237,17 @@
       }
     function getRLClass(ht,wt,subcat){
           let RLClass
-          if(RlClassMapper(subcat) === "Density"){
+          if(wt <= 10){
+              RLClass = 70
+            }      
+          else if(RlClassMapper(subcat) === "Density"){
             let height = (ht + 6)/12
             let width = 40/12
             let length = 48/12
             let weight = wt + 40
             let volume = (length * width * height)
             let density = weight/volume
+            
             if (density >= 30){
               RLClass = 60
             }
@@ -1538,7 +1336,7 @@
       let preSubCat = String(str).split(" ")
         let midSubCat
         let interText
-        if(preSubCat[0] === "Wall" || preSubCat[0] === "Ice" || preSubCat[0] === "Trash"){
+        if(preSubCat[0] === "Wall" || preSubCat[0] === "Ice" || preSubCat[0] === "Trash" || preSubCat[0] === "Water"){
           midSubCat = String(preSubCat[0] + " " + preSubCat[1])
         }
         else{
@@ -1562,13 +1360,16 @@
       while (num.length < size) num = "0" + num;
       return num;
     }    
-    function getNMFC(Category){
+    function getNMFC(Category,weight){
       let rawNMFC = String(RlClassMapper(Category))
       let NMFCsplit = rawNMFC.split(",")
       let interNMFC = Number(NMFCsplit[1])
       let partialNMFC = pad(interNMFC, 6)
       let NMFCcode
-      if (partialNMFC === "000NaN") {
+      if (weight <= 10) {
+        NMFCcode = 095190  
+      }
+      else  if (partialNMFC === "000NaN") {
         NMFCcode = "No NMFC"        
       }
       else{
@@ -1576,13 +1377,15 @@
       }
       return NMFCcode
     }
-    function getNMFCsub(Category){
+    function getNMFCsub(Category, weight){
       let rawNMFC = String(RlClassMapper(Category))
       let NMFCsplit = rawNMFC.split(",")
       let NMFCcode
-      if (NMFCsplit[2] === undefined){
+      
+      if (weight <= 10){NMFCcode = `/9`}
+      else if (NMFCsplit[2] === undefined){
         NMFCcode = ""
-      }
+      } 
       else{
         NMFCcode = `/${NMFCsplit[2]}`
       }
@@ -1773,7 +1576,12 @@
         }
     }
     return addedBoxCharge
-}    
+}
+    function checkShipped(qty,ship,refund){
+      let num = Number(ship) + Number(refund)
+      if(num >= qty){return true}
+       else {return false}
+}
     function newProd(arr, i){
       let previous = arr[i]
       let cost = getLowest(previous[13],previous[25])
@@ -1791,7 +1599,8 @@
       let depth = checkUndefined(previous[18])
       let rlSku = String(sku) + "-" +String(subcat)
       let rlClass = getRLClass(ht,weight,subcat)
-      let newItem = new Product(poNotes,sku,weight,cost,ht,width,depth,price,cat,subcat,adWidth,qty,poNum,rlSku,rlClass)
+      let shipped = checkShipped(qty,previous[27],previous[28])
+      let newItem = new Product(poNotes,sku,weight,cost,ht,width,depth,price,cat,subcat,adWidth,qty,poNum,rlClass,shipped)
       return newItem
     }
     function getObjArray(arr){
@@ -1857,29 +1666,62 @@
         return objArr
     }
     class Product{
-      constructor(PONotes,Sku,Weight,Cost,Height,Width,Depth,Price,Category,SubCategory,AdWidth,Quantity,PONum,RLSku,Class){
+      constructor(PONotes,Sku,Weight,Cost,Height,Width,Depth,Price,Category,SubCategory,AdWidth,Quantity,PONum,Class,Shipped){
         this.PONotes = PONotes
         this.Sku = Sku
-        this.Weight = Weight
+        this.Weight =  Number(Number(Weight).toFixed(1))
         this.Cost = Cost
         this.Margin = Number(Number(Price - Cost).toFixed(2)) 
-        this.Height = Height
-        this.Width = Width
-        this.Depth  = Depth
+        this.Height = Number(Number(replaceZero(Height)).toFixed(1))
+        this.Width = Number(Number(replaceZero(Width)).toFixed(1))
+        this.Depth  = Number(Number(replaceZero(Depth)).toFixed(1))
         this.Price = Price
         this.Category = Category
         this.SubCategory = SubCategory
         this.AdWidth = AdWidth
         this.Quantity = Quantity
         this.PONum = PONum
-        this.RLSku = RLSku
-        this.NMFC = getNMFC(SubCategory)
-        this.NMFCsub = getNMFCsub(SubCategory)
+        this.NMFC = getNMFC(SubCategory,Number(Number(Weight).toFixed(1)))
+        this.NMFCsub = getNMFCsub(SubCategory,Weight)
         this.FullNMFC = `${this.NMFC}${this.NMFCsub}`
         this.Class = Class
         this.Cube = Math.ceil((Height/12)*(Width/12)*(Depth/12))
+        this.Shipped = Shipped
+        this.isPart = partMapper(Sku)
       }
-
+      get DimensionalWeight(){
+        return this.getDimWeight(this.Weight,this.Width,this.Height,this.Depth)
+      }
+      get Oversized(){
+        return this.getOversized(this.Weight,this.Width,this.Height,this.Depth)
+      }
+      get RLSku(){
+        return this.getRLSku(this.Sku,this.SubCategory,this.isPart)
+      }
+      getRLSku(sku,subcat,partcheck){
+        if (partcheck === true) {return `${sku}`}
+        else if (subcat === "VENTILATION") {return `${sku}-RANGEHOOD`}
+        else{return `${sku}-${subcat}`}
+      }
+      getDimWeight(Weight,Width,Height,Length){
+       let cube = (Width * Height * Length)
+       let dimWeight = cube/166
+       let subfinal = Math.max(Weight,dimWeight)
+       let final = subfinal.toFixed(1)
+       return final
+      }
+      getOversized(Weight,Width,Height,Length){
+       let cube = (Width * Height * Length)
+       let dimWeight = cube/166
+       let subfinal = Math.max(Weight,dimWeight)
+       let shipWeight = subfinal.toFixed(1)
+       let cubeft = cube/1728
+       let oversized
+       if (cubeft <= 3) {return false}
+       else if((Length + Width) > 130 || shipWeight > 75 ){return true}
+       else if((Length + Width) > 165 || Length > 108 || shipWeight > 150 ){return "DNS"}
+       else{return false}
+      }
     }
     class Line{
       constructor(orderNo,Customer,Address,phone,Zip,State,ShipAgent,ShipInfo,City,Product,EntityID,ShipPaid){
@@ -1888,6 +1730,7 @@
         this.Address = String(Address).replace(/['"]+/g, '')
         this.phone = String(phone).replace(/['"]+/g, '')
         this.Zip = Number(Zip)
+        this.FullZip = pad(Zip,5)
         this.AmHomeZip = amHomeMapper(Number(Zip))
         this.ProZip = ProMapper(Number(Zip))
         this.State = String(State).replace(/['"]+/g, '')
@@ -1902,6 +1745,9 @@
       }
       get totalWeight(){
         return this.getProductWeight(this.Product)
+      }
+      get totalCost(){
+        return this.getProductCost(this.Product)
       }
       get ProductWeight(){
         return this.getFilteredProductWeight(this.Product)
@@ -1960,12 +1806,19 @@
       get DS(){
         return this.getDS(this.Product)
       }
+      get isXPO(){
+        return this.getIsXPO(this.Zip)
+      }
+      getIsXPO(Zip){
+        if (XPOMapper(Zip) != "N/A"){return true}
+          else{return false}
+      }
       getCarrier(AM,Pro,RL){
         let AMQuote
         let ProQuote
         let RLQuote
         let carrier
-        if (AM === undefined || Number(AM) === NaN || AM === "O/A") {AMQuote = 100000}
+        if (AM === undefined || AM === "NaN" || AM === "O/A") {AMQuote = 100000}
           else{AMQuote = AM}
         if (Pro === undefined || Pro === "NaN") {ProQuote = 100000}
           else{ProQuote = Pro}  
@@ -2042,7 +1895,7 @@
         let MAX = Math.max(arg1,arg2)*Number((100-RlMapArr[0])/100)
         let subtotal = Math.max(MAX,arg3)
         let pretotal = Number(subtotal * 1.18)
-        let total = (Number(pretotal) + fee).toFixed(2)
+        let total = (Number(pretotal) + fee + 25).toFixed(2)
         if(total === undefined || total === NaN){final = "N/A"}
           else{final = total}
         return Number(final)
@@ -2092,7 +1945,6 @@
       }
       return total
     }
-
       getAMTransfer(Appliances,Zip,AmHomeZip){
         let AmTransfer
         if (amMasterMapper(Zip) > 9990){
@@ -2145,7 +1997,7 @@
       getFilteredProductWeight(arr){
         let counter = 0
         for (let i = 0; i < arr.length; i++){
-          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS") || arr[i].Sku.includes("FME-") ){
+          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS") || arr[i].Sku.includes("FME-") || arr[i].Shipped === true){
             continue
           }
           else{
@@ -2158,7 +2010,7 @@
       getFilteredProductCube(arr){
         let counter = 0
         for (let i = 0; i < arr.length; i++){
-          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS")){
+          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS") || arr[i].Sku.includes("FME-") || arr[i].Shipped === true){
             continue
           }
           else{
@@ -2174,7 +2026,14 @@
           counter = counter + (arr[i].Price * arr[i].Quantity)
         }
         return counter
-      }    
+      }
+      getProductCost(arr){
+        let counter = 0
+        for (let i = 0; i < arr.length; i++){
+          counter = counter + (arr[i].Cost * arr[i].Quantity)
+        }
+        return counter
+      }       
       getProductMargin(arr){
         let counter = 0
         for (let i = 0; i < arr.length; i++){

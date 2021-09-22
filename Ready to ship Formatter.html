@@ -12,7 +12,7 @@
   <script src="partcheck.js"></script>
   <script src="XPO.js"></script>
   <script src="AMQuote.js"></script>
-
+  <script src="badorders.js"></script>
 </head>
 <style>
 </style>
@@ -285,6 +285,7 @@
     let HiCount = 1
     let EmptyCount = 1
     let XPOCount = 1
+    let LocalCount = 1
 
 
     let globalObjArr = []
@@ -308,6 +309,14 @@
       let rowCount = document.getElementById(tableid).rows.length;
       return rowCount
     }
+    function sendorders(obj){
+      if (obj.isBad === "Local") {
+        skuSplit(obj,"LocalTable",LocalCount)
+          LocalCount++
+      }
+      else{skuSplit(obj,"EmptyTable",EmptyCount)
+          EmptyCount++}
+    }
     function checkPO (arr){
       let otherArr = []
       let DsCount = 0
@@ -315,6 +324,9 @@
         if (arr[i].ProductWeight === 0 && arr[i].ProductCube === 0) {
           skuSplit(arr[i],"EmptyTable",EmptyCount)
           EmptyCount++
+        }
+        else if (arr[i].isBad != "Good") {
+          sendorders(arr[i])
         }
         else if (arr[i].DS === true ) {dsArr.push(arr[i])}
           else{otherArr.push(arr[i])}
@@ -360,7 +372,7 @@
     }
     function checkLocal(arr){
       let otherArr = []
-      let LocalCount = 0
+     
       for (let i = 0; i < arr.length; i++) {
         if (XPOMapper(arr[i].Zip) != "N/A") {
           skuSplit(arr[i],"XPOTable",XPOCount)
@@ -1809,6 +1821,9 @@
       }
       get isXPO(){
         return this.getIsXPO(this.Zip)
+      }
+      get isBad(){
+        return BadOrders(this.orderNo)
       }
       getIsXPO(Zip){
         if (XPOMapper(Zip) != "N/A"){return true}

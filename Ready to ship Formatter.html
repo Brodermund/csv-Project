@@ -5,15 +5,13 @@
   <script src="RLClass.js"></script>
   <script src="Progistics.js"></script>
   <script src="fullState.js"></script>
-  <script src="AMNYQuote.js"></script>
-  <script src="AMFinalMile.js"></script>
-  <script src="AMCAQuote.js"></script>
   <script src="AMMasterZips.js"></script>
   <script src="ProgisticsMap.js"></script>
   <script src="ProGrid.js"></script>
   <script src="RLMasterMap.js"></script>
   <script src="partcheck.js"></script>
   <script src="XPO.js"></script>
+  <script src="AMQuote.js"></script>
 
 </head>
 <style>
@@ -1431,6 +1429,7 @@
       let Pro30 = Number(appArr[1])
       let Pro40 = Number(appArr[2])
       let Pro60 = Number(appArr[3])
+      let AMLMMap = amQMapper(Zip)[1]
       let FinalMile 
       
       if(Pro30 > 0 || Pro40 >0 || Pro60 >0 ){
@@ -1443,7 +1442,7 @@
             }   
         }
         else{
-          FinalMile = amLMMapper(Zip)
+          FinalMile = AMLMMap
         }
       return FinalMile
     }
@@ -1453,6 +1452,7 @@
       let Pro30 = Number(appArr[1])
       let Pro40 = Number(appArr[2])
       let Pro60 = Number(appArr[3])
+      let AMNYMap = amQMapper(Zip)[2]
       let NYTransfer
       if(Pro30 > 0 || Pro40 >0 || Pro60 >0 ){
           if(AMZip === "NY"){
@@ -1464,7 +1464,7 @@
           }   
       }
       else{
-        NYTransfer = amNYMapper(Zip)
+        NYTransfer = AMNYMap
       }
       return NYTransfer
     }
@@ -1475,11 +1475,12 @@
       let Pro30 = Number(appArr[1])
       let Pro40 = Number(appArr[2])
       let Pro60 = Number(appArr[3])
-      if (amCAMapper(Zip) != "No")  {
+      let AMCAMap = amQMapper(Zip)[0]
+      if (AMCAMap != "No")  {
           if (Pro30 > 0 || Pro40 > 0 || Pro60 > 0) {
             CATransfer = (Pro60 * 460) + (Pro40 * 385) + (Pro30 * 310)
           }
-          else{CATransfer = amCAMapper(Zip)}
+          else{CATransfer = AMCAMap}
           
         }
         else{CATransfer = 100000}
@@ -1801,7 +1802,7 @@
         return this.getHI(this.Product)
       }
       get Local(){
-        return this.getLocal(this.ShipInfo)
+        return this.getLocal(this.ShipInfo,this.Address)
       }
       get DS(){
         return this.getDS(this.Product)
@@ -1847,9 +1848,9 @@
         }
         return status
       }
-      getLocal(shipInfo){
+      getLocal(shipInfo,address){
         let status  
-          if (shipInfo === "Pick Up") {
+          if (shipInfo === "Pick Up" || address.toUpperCase().includes("3817 MILLSTONE")) {
             return true
           }
           else{

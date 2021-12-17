@@ -460,26 +460,33 @@
           }
 
       }
-      let finalItemString = itemArr.join(";")
-      let finalstring = `${obj.Customer};${obj.Address};${obj.FullZip};${obj.phone};${obj.orderNo};${poNumber};${obj.City};${obj.State};${numItems};${finalItemString}`
+      let finalItemString = itemArr.join("‰")
+      let finalstring = `${obj.Customer}‰${obj.Address}‰${obj.FullZip}‰${obj.FormattedPhone}‰${obj.orderNo}‰${poNumber}‰${obj.City}‰${obj.State}‰${numItems}‰${finalItemString}`
       return finalstring
 
     }
     function getFedexString(obj){
       let numItems = 0
+      let partcount = 0
+      let partweight = 0
       let itemArr = []
       for(let i = 0; i < obj.Product.length;i++){
         if(String(obj.Product[i].Sku).includes("Warranty") || String(obj.Product[i].Sku).includes("HaulAwy") || String(obj.Product[i].Sku).includes("Install-") || String(obj.Product[i].PONotes).toUpperCase().includes("DS") || obj.Product[i].PONotes === undefined|| obj.Product[i].Shipped === true){
             continue
           }
           else{
-            itemArr.push(`${obj.Product[i].Quantity}:${obj.Product[i].Weight}:${Math.ceil(obj.Product[i].Depth)}:${Math.ceil(obj.Product[i].Width)}:${Math.ceil(obj.Product[i].Height)}`)
+            if (obj.Product[i].isPart) {
+              partcount = partcount + obj.Product[i].Quantity
+              partweight = partweight + obj.Product[i].Weight
+            }
+
+            itemArr.push(`${obj.Product[i].Quantity}:${obj.Product[i].Weight}:${Math.ceil(obj.Product[i].Depth)}:${Math.ceil(obj.Product[i].Width)}:${Math.ceil(obj.Product[i].Height)}:`)
             numItems = numItems + obj.Product[i].Quantity
           }
 
       }
-      let finalItemString = itemArr.join(";")
-      let finalString = `${obj.Customer};${obj.Address};${obj.FullZip};${obj.City};${obj.State};${obj.phone};${obj.orderNo};${numItems};${finalItemString}`
+      let finalItemString = itemArr.join("‰")
+      let finalString = `${obj.Customer}‰${obj.Address}‰${obj.FullZip}‰${obj.City}‰${obj.State}‰${obj.phone}‰${obj.orderNo}‰${numItems}‰${finalItemString}`
       return finalString
 
     }
@@ -550,7 +557,7 @@
         let productHead = ["AdW", "SKU", "Wt", "Category","Qty", "Class"]
         if( i === 0){
           insert_Row_Test(tableid,obj,row)
-          if(product[i].Sku.includes("Warranty") || product[i].Sku.includes("HaulAwy") || product[i].Sku.includes("Install-") || product[i].PONotes.toUpperCase().includes("DS")|| product[i].Sku.includes("FME-") || product[i].Shipped === true){
+          if(product[i].SubCategory === "HAUL" || product[i].SubCategory === "WARRANTY" || product[i].SubCategory === "INSTALL" || product[i].PONotes.toUpperCase().includes("DS")|| product[i].Sku.includes("FME-") || product[i].Sku.includes("CPS-LGAP")|| product[i].Shipped === true){
             continue
           }
           else{
@@ -558,7 +565,7 @@
           }
         }
         else{
-          if(product[i].Sku.includes("Warranty") || product[i].Sku.includes("HaulAwy") || product[i].Sku.includes("Install-") || product[i].PONotes.toUpperCase().includes("DS")|| product[i].Sku.includes("FME-") || product[i].Shipped === true){
+          if(product[i].SubCategory === "HAUL" || product[i].SubCategory === "WARRANTY" || product[i].SubCategory === "INSTALL" || product[i].PONotes.toUpperCase().includes("DS")|| product[i].Sku.includes("FME-") || product[i].Sku.includes("CPS-LGAP")|| product[i].Shipped === true){
             continue
           }
           else{
@@ -1342,11 +1349,17 @@
         }
         return lowest
     }
-    function getSubcat(str){
+    function getSubcat(str,sku){
       let preSubCat = String(str).split(" ")
         let midSubCat
         let interText
-        if(preSubCat[0] === "Wall" || preSubCat[0] === "Ice" || preSubCat[0] === "Trash" || preSubCat[0] === "Water"){
+        let Sku = String(sku)
+        let finalText
+        if (partMapper(Sku) === true) {return "PART"}
+        if (Sku.includes("Warranty") || Sku.includes("CPS-LGAP51500")) {return "WARRANTY"}
+        if (Sku.includes("Install-") || Sku.includes("FME-")) {return "INSTALL"}
+        if (Sku.includes("HaulAwy")) {return "HAUL"}
+        if(preSubCat[0] === "Wall" || preSubCat[0] === "Ice" || preSubCat[0] === "Trash" || preSubCat[0] === "Water" || preSubCat[0] === "Compact"|| preSubCat[0] === "Air"|| preSubCat[0] === "Bed"){
           midSubCat = String(preSubCat[0] + " " + preSubCat[1])
         }
         else{
@@ -1359,10 +1372,8 @@
         else{
           interText = midSubCat.toUpperCase()
         }
-
-        let finalText = String(interText)
-
-
+        if (interText === "BED ACCESSORIE") {finalText = "BED RAILS"}
+          else{finalText = String(interText)}
         return finalText
     }
     function pad(num, size) {
@@ -1603,7 +1614,7 @@
       let weight = (Math.ceil(Number(previous[11])))
       let cat = previous[19]
       let qty = (Number(previous[23]))
-      let subcat = getSubcat(previous[20])
+      let subcat = getSubcat(previous[20],sku)
       let poNotes = checkUndefined(previous[9])
       let poNum = checkUndefined(previous[22])
       let adWidth = checkUndefined(previous[21])
@@ -1615,6 +1626,17 @@
       let shipped = checkShipped(qty,previous[27],previous[28])
       let newItem = new Product(poNotes,sku,weight,cost,ht,width,depth,price,cat,subcat,adWidth,qty,poNum,rlClass,shipped)
       return newItem
+    }
+
+    function addressformat(add1,add2){
+      let finaladd2
+      let arg2 = String(add2)
+      if (arg2.length > 0){
+        finaladd2 = `{${arg2}`
+      }
+      else{finaladd2 = ""}
+      
+      return `${add1} ${finaladd2}`
     }
     function getObjArray(arr){
         let objArr = []
@@ -1646,7 +1668,7 @@
               productArr.push(newItem)
               let order = previous[0]
               let name = String(`${previous[1]} ${previous[2]}`)
-              let address = String(`${previous[4]} ${previous[5]}`)
+              let address = addressformat(previous[4],previous[5])
               let phone = previous[3]
               let rawZip = String(previous[7]).split("-")
               let zip = rawZip[0]
@@ -1822,6 +1844,9 @@
       get isXPO(){
         return this.getIsXPO(this.Zip)
       }
+      get FormattedPhone(){
+        return this.getFormattedPhone(this.phone)
+      }
       get isBad(){
         return BadOrders(this.orderNo)
       }
@@ -1862,6 +1887,25 @@
           }
         }
         return status
+      }
+      getFormattedPhone(phone){
+        
+        let str1 = phone.replace('(',"")
+        let str2 = str1.replace(')',"")
+        let str3 = str2.replace('-',"")
+        let str4 = str3.replace('-',"")
+        let str5 = str4.replace(/['"]+/g, '')
+
+        if (str4.length != 10) {
+          return "Incorect Format"
+        }
+        else{
+          return ("(" + str5.slice(0,3) + ") " + str5.slice(3,6) + "-" + str5.slice(6) )
+
+        }
+        
+
+
       }
       getLocal(shipInfo,address){
         let status  
@@ -2000,7 +2044,7 @@
       getNumItems(arr){
         let counter = 0
         for (let i = 0; i < arr.length; i++){
-          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS")|| arr[i].Sku.includes("FME-")){
+          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS")|| arr[i].Sku.includes("FME-")|| arr[i].Shipped === true|| arr[i].Sku.includes("CPS-LGAP")){
             continue
           }
           else{
@@ -2013,7 +2057,7 @@
       getFilteredProductWeight(arr){
         let counter = 0
         for (let i = 0; i < arr.length; i++){
-          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS") || arr[i].Sku.includes("FME-") || arr[i].Shipped === true){
+          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS") || arr[i].Sku.includes("FME-") || arr[i].Shipped === true|| arr[i].Sku.includes("CPS-LGAP")){
             continue
           }
           else{
@@ -2026,7 +2070,7 @@
       getFilteredProductCube(arr){
         let counter = 0
         for (let i = 0; i < arr.length; i++){
-          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS") || arr[i].Sku.includes("FME-") || arr[i].Shipped === true){
+          if(arr[i].Sku.includes("Warranty") || arr[i].Sku.includes("HaulAwy") || arr[i].Sku.includes("Install-") || arr[i].PONotes.toUpperCase().includes("DS") || arr[i].Sku.includes("FME-") || arr[i].Shipped === true|| arr[i].Sku.includes("CPS-LGAP")){
             continue
           }
           else{

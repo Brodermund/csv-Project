@@ -1,18 +1,13 @@
 <head> 
   <link rel="stylesheet" href="styles.css">
-  <script src="AMHome.js"></script>
   <script src="LocalZip.js"></script>
   <script src="RLClass.js"></script>
-  <script src="Progistics.js"></script>
   <script src="fullState.js"></script>
-  <script src="AMMasterZips.js"></script>
-  <script src="ProgisticsMap.js"></script>
   <script src="ProGrid.js"></script>
-  <script src="RLMasterMap.js"></script>
   <script src="partcheck.js"></script>
   <script src="XPO.js"></script>
-  <script src="AMQuote.js"></script>
   <script src="badorders.js"></script>
+  <script src="MasterLookup.js"></script>
 </head>
 <style>
 </style>
@@ -1627,7 +1622,37 @@
       let newItem = new Product(poNotes,sku,weight,cost,ht,width,depth,price,cat,subcat,adWidth,qty,poNum,rlClass,shipped)
       return newItem
     }
-
+    function amHomeMapper(Zip){
+      let masterResult = MasterLookup(Zip)
+      let amMap = masterResult[0]
+      return amMap[0]
+    }
+    function amMasterMapper(Zip){
+      let masterResult = MasterLookup(Zip)
+      let amMap = masterResult[0]
+      return amMap[1]
+    }
+    function amQMapper(Zip){
+      let masterResult = MasterLookup(Zip)
+      let amMap = masterResult[0]
+      return amMap[2]
+    }
+    function proMasterMapper(Zip){
+      let masterResult = MasterLookup(Zip)
+      let proMap = masterResult[1]
+      return proMap[1]
+      
+    }
+    function ProMapper(Zip){
+      let masterResult = MasterLookup(Zip)
+      let proMap = masterResult[1]
+      return proMap[0]
+    }
+    function RLMasterMapper(Zip){
+      let masterResult = MasterLookup(Zip)
+      console.log(masterResult)
+      return masterResult[2]
+    }
     function addressformat(add1,add2){
       let finaladd2
       let arg2 = String(add2)
